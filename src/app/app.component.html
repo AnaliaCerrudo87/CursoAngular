@@ -1,0 +1,65 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<app-header></app-header>
+<div class="container">
+  <div class="row mt-4">
+    <div class="col-sm-6">
+      <h2>Genere una lista utilizando *ngFor, y le aplicamos un fondo según el género del alumno con ngClass</h2>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let alumno of alumnos"> <a [ngClass]="{'color1':alumno.genero=='Masculino','color3':alumno.genero=='No Binario','color2':alumno.genero=='Femenino'}">{{alumno.name}}</a></li>
+      </ul>
+
+    </div>
+    <div class="col-sm-6">
+      <img src="../../assets/imagenes/estudiantes.jpg"  alt="..."height="400px">
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Edad</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apodo creado</th>
+            <th scope="col">Genero</th>
+          </tr>
+        </thead>
+        <tbody class="cuerpoTabla">
+        <th>
+          <tr  *ngFor="let alumno of alumnos">{{alumno.edad}}</tr>
+        </th>
+        <th>
+          <tr  *ngFor="let alumno of alumnos">{{alumno.name}}</tr>
+        </th>
+        <th class="apodo">
+          <tr *ngFor="let alumno of alumnos">{{alumno.name | slice:1:4}}</tr>
+        </th>
+        <th>
+          <tr  *ngFor="let alumno of alumnos">{{alumno.genero}}</tr>
+        </th>
+      </tbody>
+      </table>
+     </div>
+    <div class="col-sm"><h2>Cree una tabla en la cual utilice la pipe de "slice" para generar el apodo</h2></div>
+    
+  </div>
+  
+</div>
+<app-footer></app-footer>
+
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
